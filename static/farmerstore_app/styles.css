@@ -2,6 +2,10 @@ span {
     color: chartreuse;
     font-family: 'Trebuchet MS';
 }
+.active {
+    display: inline-block;
+    border-top: 10px solid greenyellow;
+}
 #italic {
     color: #bcbcbc;
     font-style: italic;
