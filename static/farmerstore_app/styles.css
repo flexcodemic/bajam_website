@@ -1,15 +1,11 @@
-span {
-    color: chartreuse;
-    font-family: 'Trebuchet MS';
-}
-.active {
-    display: inline-block;
-    border-top: 10px solid greenyellow;
-}
+
 #italic {
-    color: #bcbcbc;
+    color: #414141;
     font-style: italic;
 }
 #dropdownMenu1, #dropdownMenu2 {
     color: #bcbcbc;
+}
+#dropdownMenu {
+    color: #727272;
 }

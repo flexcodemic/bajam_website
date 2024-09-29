@@ -7,76 +7,110 @@
     <title>Farmer Store</title>
     <!-- Link to the external CSS file -->
     <link rel="stylesheet" type="text/css" href="{% static 'farmerstore_app/styles.css' %}">
-    <!-- Add icons (optional, using FontAwesome) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Add FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
-    {% comment %} Top Header Navbar {% endcomment %}
+    <!-- Top Header Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid bg-dark mx-5">
-    {% comment %} <a class="navbar-brand" href="#"><span>Farmer</span><span id="italic">Store</span></a> {% endcomment %}
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Shop</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Sell</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Contact</a>
-        </li>
-      </ul>
-      <div class="dropdown">
-    <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false">
-    NGN
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li><button class="dropdown-item" type="button">KES</button></li>
-    <li><button class="dropdown-item" type="button">USA</button></li>
-    <li><button class="dropdown-item" type="button">GHS</button></li>
-    </ul>
+        <div class="container-fluid mx-5">
+            <a class="navbar-brand" href="#"><span class="text-success">Farmer</span>Store</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sell</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+                <!-- Right side of the navbar with icons -->
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item me-3">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-bell"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-user"></i> Login / Signup
+                        </a>
+                    </li>
+                    <!-- Currency Dropdown -->
+                    <li class="nav-item dropdown me-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarCurrency" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            NGN
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarCurrency">
+                            <li><a class="dropdown-item" href="#">KES</a></li>
+                            <li><a class="dropdown-item" href="#">USD</a></li>
+                            <li><a class="dropdown-item" href="#">GHS</a></li>
+                        </ul>
+                    </li>
+                    <!-- Language Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarLanguage" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            English
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarLanguage">
+                            <li><a class="dropdown-item" href="#">French</a></li>
+                            <li><a class="dropdown-item" href="#">Spanish</a></li>
+                            <li><a class="dropdown-item" href="#">German</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sub-navbar -->
+    <div class="navbar-light bg-light py-3">
+        <div class="container-fluid d-flex align-items-center">
+            <a class="navbar-brand" href="#"><span class="text-success">Farmer</span>Store</a>
+            <!-- Browse Dropdown -->
+            <div class="dropdown ms-3">
+                <button class="btn btn-light dropdown-toggle px-4" type="button" id="browseMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                    Browse
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="browseMenu">
+                    <li><button class="dropdown-item" type="button">Category 1</button></li>
+                    <li><button class="dropdown-item" type="button">Category 2</button></li>
+                    <li><button class="dropdown-item" type="button">Category 3</button></li>
+                    <li><button class="dropdown-item" type="button">Category 4</button></li>
+                    <li><button class="dropdown-item" type="button">Category 5</button></li>
+                </ul>
+            </div>
+            <!-- Search Form -->
+            <form class="d-flex ms-3 flex-fill">
+                <input class="form-control me-2" type="search" placeholder="What do you want to buy today..." aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
     </div>
-      <div class="dropdown">
-    <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-    English
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-    <li><button class="dropdown-item" type="button">French</button></li>
-    <li><button class="dropdown-item" type="button">Spanish</button></li>
-    <li><button class="dropdown-item" type="button">German</button></li>
-    </ul>
-    </div>
-    </div>
-</nav>
-</div>
-{% comment %} Sub-navbar {% endcomment %}
-<nav class="navbar navbar-light bg-light">
-  <div class="container-fluid mx-5">
-    <form class="d-flex">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
 
+    <!-- Add your content here -->
 
-
-
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
 </html>
