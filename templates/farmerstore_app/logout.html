@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-5">
+    <h2>Logout</h2>
+    <p>Are you sure you want to logout?</p>
+    <form>
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Logout</button>
+        <a href="/" class="btn btn-bg-secondary">Cancel</a>
+    </form>
+</div>
+{% endblock %}
