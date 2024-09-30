@@ -140,4 +140,4 @@ If you have any questions, suggestions, or issues, feel free to reach out:
     
 *   **Email**: anthonyaruma091@gmail.com
     
-*   **GitHub**: [Tony Rumex](https://github.com/flexcodemic/bajam_website)
+*   **GitHub**: [Anthony Aruma](https://github.com/flexcodemic/bajam_website)
