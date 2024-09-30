@@ -136,7 +136,7 @@ Contact
 
 If you have any questions, suggestions, or issues, feel free to reach out:
 
-*   **Project Owner**: Tony Rumex
+*   **Project Owner**: Anthony Aruma
     
 *   **Email**: anthonyaruma091@gmail.com
     
