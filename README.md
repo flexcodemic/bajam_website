@@ -138,6 +138,6 @@ If you have any questions, suggestions, or issues, feel free to reach out:
 
 *   **Project Owner**: Tony Rumex
     
-*   **Email**: tonyrumex@example.com
+*   **Email**: anthonyaruma091@gmail.com
     
 *   **GitHub**: [Tony Rumex](https://github.com/flexcodemic/bajam_website)
